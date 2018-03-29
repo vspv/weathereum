@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>weatherium</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://rawgit.com/marvelapp/devices.css/master/assets/devices.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,500,700">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+		<link rel="stylesheet" href="asset/css/style.css">
+	</head>
+
+	<body>
+
+		<div class="screen">
+			<img src="asset/img/logo.png" alt="weathereum" id="logo">
+			<form method="get" class="form">
+				<fieldset>
+					<legend>Если поиск по геолакации,в поля ввода широты и долготы нужно будут автозаполнять ваши координаты.</legend>
+					    <div class="container">
+                            <form id="geocoding_form" class="form-horizontal">
+                                <div class="form-group">
+                                    <button type="button" class="find-me btn btn-info btn-block">Найти геолокацию!</button>
+                                </div>
+                            </form>
+                            <p class="no-browser-support">Sorry, the Geolocation API isn't supported in Your browser.</p>
+                            
+                                <div class="map-overlay">
+                                    <div id="map"></div>
+                                </div>
+                        </div>
+                        <legend>Если поиск по городу, поля ввода широты и долготы будут автозаполнять ваши координаты.</legend>
+						<ul class="list-reset">
+							<li class="form-field">
+								<label for="city-search">Город:</label>
+								<input type="text" id="city-search" placeholder="Например: Киев">
+							</li>
+
+							<li class="form-field">
+								<label for="latitude">Широта:</label>
+								<input type="text" id="latitude" placeholder="Например: 50.4546600" required>
+							</li>
+
+							<li class="form-field">
+								<label for="longitude">Долгота:</label>
+								<input type="text" id="longitude" placeholder="Например: 30.5238000" required>
+							</li>
+
+							<li class="form-field">
+								<input type="checkbox" id="celsius">
+								<label for="celsius">В градусах по Цельсию.</label>
+							</li>
+						</ul>
+				</fieldset>
+                <button>Загрузить Погоду!</button>
+			</form>
+		</div>	
+
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/skycons/1396634940/skycons.min.js'></script>
+		<script src="asset/js/script.js"></script>
+	</body>
+</html>
